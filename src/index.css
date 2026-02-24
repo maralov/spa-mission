@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    @apply bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white;
+}
+
+body {
+    background: radial-gradient(
+        circle at 20% 20%,
+        rgba(124, 58, 237, 0.5),
+        transparent 40%
+    ),
+    radial-gradient(
+        circle at 80% 70%,
+        rgba(168, 85, 247, 0.4),
+        transparent 40%
+    ),
+    linear-gradient(135deg, #0F0C29, #302B63, #24243E);
+
+    color: white;
+}
