@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/spa-mission/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spring is comming</title>
+    <title>Spring is coming</title>
 	  <script>
           (function () {
+              const repo = "/spa-mission";
               const params = new URLSearchParams(window.location.search);
               const redirect = params.get("redirect");
               if (redirect) {
-                  window.history.replaceState(null, "", redirect);
+                  const decoded = decodeURIComponent(redirect); // "/ksenia"
+                  // Повертаємо URL назад в межах репозиторія
+                  window.history.replaceState(null, "", repo + decoded);
               }
           })();
 	  </script>
