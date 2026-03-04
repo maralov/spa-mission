@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirect</title>
+    <script>
+      const repo = '/spa-mission'
+      const path = location.pathname.replace(repo, '') // "/ksenia"
+      const qs = location.search || ''
+      const hash = location.hash || ''
+      location.replace(
+        repo + '/?redirect=' + encodeURIComponent(path + qs + hash)
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
