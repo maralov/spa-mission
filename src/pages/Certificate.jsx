@@ -1,5 +1,5 @@
 import { useLocation, useParams } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import confetti from 'canvas-confetti'
 
@@ -107,7 +107,10 @@ export default function Certificate() {
                 </div>
 
                 {/* Preview (красиво показати саме сертифікат) */}
-                <button className="p-0 bg-transparent mt-5 overflow-hidden rounded-2xl border border-white/60 shadow">
+                <button
+                  onClick={downloadCertificate}
+                  className="p-0 bg-transparent mt-5 overflow-hidden rounded-2xl border border-white/60 shadow"
+                >
                   <img
                     src={CERT_URL}
                     alt="SPA Certificate"
