@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/spa-mission/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spa-mission</title>
-    <script type="module" crossorigin src="/spa-mission/assets/index-BYfRe3Ht.js"></script>
-    <link rel="stylesheet" crossorigin href="/spa-mission/assets/index-AJ9XArbI.css">
+    <title>Spring is comming</title>
+	  <script>
+          (function () {
+              const params = new URLSearchParams(window.location.search);
+              const redirect = params.get("redirect");
+              if (redirect) {
+                  window.history.replaceState(null, "", redirect);
+              }
+          })();
+	  </script>
+    <script type="module" crossorigin src="/spa-mission/assets/index-kxc2cCKN.js"></script>
   </head>
   <body>
     <div id="root"></div>
